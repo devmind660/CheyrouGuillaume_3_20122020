@@ -1,0 +1,23 @@
+// Pied de page
+
+footer {
+    background-color: $grissouris;
+    color: white;
+    padding: 30px;
+    h3 {
+        font-family: 'Shrikhand', cursive;
+        margin: 0px;
+    }
+    ul {
+        list-style-type: none;
+        line-height: 0;
+        padding: 0px;
+        li {
+            display: flex;
+            align-items: center;
+            i {
+                width: 25px;
+            }
+        }
+    }
+}

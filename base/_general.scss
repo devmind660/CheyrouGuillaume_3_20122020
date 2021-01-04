@@ -1,0 +1,24 @@
+// Général
+
+body {
+    font-family: 'Roboto', sans-serif;
+	padding: 0px;
+	margin: 0px;
+}
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
+a {
+	color: unset;
+	text-decoration: none;
+}
+
+// Couleurs
+
+$primaire: #9356DC;
+$secondaire: #FF79DA;
+$tertiaire: #99E2D0;
+
+$grisclair: rgb(246, 246, 246);
+$gris: rgb(234, 234, 234);
+$grissouris: rgb(53, 53, 53);

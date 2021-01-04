@@ -1,3 +1,116 @@
-img{
-    width: 200px;
+// Général
+
+@import "./base/general";
+
+// En-tête
+
+header {
+    padding: 15px 15px 10px 15px;
+    img {
+        width: 200px;
+    }
+}
+#localisation {
+    background-color: $gris;
+    box-shadow: inset 0 3px 3px silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    i {
+        width: 25px;
+    }
+}
+#introduction {
+    background-color: $grisclair;
+    text-align: center;
+    padding: 30px;
+    @import "./composants/bouton";
+}
+
+// Fonctionnement
+
+#fonctionnement {
+    padding: 30px;
+    ol {
+        list-style-type: none;
+        padding: 0px;
+        li {
+            background-color: $grisclair;
+            color: $primaire;
+            display: flex;
+            align-items: center;
+            border-radius: 30px;
+            box-shadow: 0px 5px 10px silver;
+            position: relative;
+            max-width: 300px;
+            padding: 5px;
+            padding-left: 30px;
+            margin: 10px;
+            p.num {
+                background-color: $primaire;
+                color: white;
+                text-align: center;
+                border-radius: 15px;
+                position: absolute;
+                left: -5px;
+                width: 20px;
+                height: 20px;
+            }
+            i {
+                width: 30px;
+            }
+        }
+    }
+}
+
+// Restaurants
+
+#restaurants {
+    background-color: $grisclair;
+    padding: 30px;
+    .conteneur {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        a {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 15px silver;
+            position: relative;
+            height: 200px;
+            min-width: 250px;
+            max-width: 300px;
+            margin: 10px;
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+            .description {
+                position: absolute;
+                bottom: 0px;
+                background-color: white;
+                padding: 10px;
+                width: 100%;
+                h3, p {
+                    margin: 0px;
+                }
+            }
+        }
+    }
+}
+
+// Pied de page
+
+@import "./layouts/footer";
+
+// Mobile
+
+@media all and (max-width: 425px) {
+    header {
+        text-align: center;
+    }
+    #introduction, #fonctionnement, #restaurants, footer {
+        padding: 15px;
+    }
 }
