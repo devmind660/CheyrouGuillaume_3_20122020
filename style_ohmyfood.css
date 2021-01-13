@@ -84,11 +84,11 @@ section.plat h2 {
   margin-bottom: 10px;
 }
 
-section.plat a {
+section.plat article {
   margin: 15px 5px;
 }
 @media all and (max-width: 425px) {
-  section.plat a {
+  section.plat article {
     margin: 5px 0px;
   }
 }
@@ -192,17 +192,17 @@ div.image-titre i {
   }
 }
 
-section.plat a .ajout {
+section.plat article .ajout {
   transform: translateX(100%);
 }
-section.plat a:hover > .ajout {
+section.plat article:hover > .ajout {
   transform: translateX(0%);
   transform-origin: 100% 50%;
 }
-section.plat a:hover > .ajout i {
+section.plat article:hover > .ajout i {
   transform: rotate(1turn);
 }
-section.plat a .ajout, section.plat a .ajout i {
+section.plat article .ajout, section.plat article .ajout i {
   transition: transform 500ms ease-in-out;
 }
 
