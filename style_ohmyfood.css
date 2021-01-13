@@ -419,27 +419,28 @@ section.plat h2 {
   border-bottom: 4px #99E2D0 solid;
   width: 50px;
 }
-section.plat div.conteneur a {
+section.plat div.conteneur article {
   display: flex;
   align-items: flex-end;
   flex: 1;
   background-color: white;
   box-shadow: 0px 0px 5px silver;
   border-radius: 10px;
+  cursor: pointer;
   position: relative;
   overflow: hidden;
   min-width: 200px;
 }
-section.plat div.conteneur a .desc__plat {
+section.plat div.conteneur article .desc__plat {
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
 }
-section.plat div.conteneur a .desc__plat h3, section.plat div.conteneur a .desc__plat p {
+section.plat div.conteneur article .desc__plat h3, section.plat div.conteneur article .desc__plat p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-section.plat div.conteneur a .ajout {
+section.plat div.conteneur article .ajout {
   display: flex;
   text-align: center;
   align-items: center;
