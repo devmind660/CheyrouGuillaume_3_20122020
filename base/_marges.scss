@@ -1,5 +1,9 @@
-// Marges
+// Marges générales
 
+#loader div {
+    padding: 15px;
+    margin: 30px;
+}
 header {
     padding: 15px 15px 10px 15px;
 }
@@ -14,7 +18,7 @@ h3 {
     margin-bottom: 5px;
 }
 
-// Page Accueil
+// Page d'accueil
 
 #localisation {
     padding: 15px;
@@ -25,7 +29,7 @@ h3 {
         margin: 15px;
     }
 }
-#introduction, #fonctionnement, #restaurants, section.plat, footer {
+#introduction, #fonctionnement, #restaurants, h1, section.plat, footer {
     padding: 30px;
     @media all and (max-width: 425px) {
         padding: 15px;
@@ -35,19 +39,16 @@ h3 {
 // Restaurants
 
 #restaurants a{
-    margin: 15px 5px;
+    margin: 15px;
     @media all and (max-width: 425px) {
         margin: 10px 0px;
     }
 }
 .desc__restaurant {
-    padding: 15px;
-    @media all and (max-width: 425px) {
-        padding: 10px;
-    }
+    padding: 10px 15px;
 }
 
-// Page Menus
+// Page des menus
 
 h1 {
     margin: -30px 0px 0px 0px;
@@ -55,11 +56,19 @@ h1 {
 
 // Plats
 
+section.plat h2 {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
 section.plat a {
-    padding: 15px;
     margin: 15px 5px;
     @media all and (max-width: 425px) {
-        padding: 10px;
-        margin: 5px 0px;
+            margin: 5px 0px;
     }
+}
+.desc__plat, .prix {
+    padding: 10px 15px;
+}
+.ajout {
+    padding: 0px 15px;
 }

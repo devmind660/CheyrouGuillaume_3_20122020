@@ -62,9 +62,7 @@ div#contenu {
 
 #restaurants {
     background-color: $grisclair;
-    .conteneur {
-        display: flex;
-        flex-wrap: wrap;
+    div.conteneur {
         justify-content: space-around;
         a {
             border-radius: 15px;
@@ -72,8 +70,10 @@ div#contenu {
             box-shadow: 0 0 15px silver;
             position: relative;
             height: 200px;
-            min-width: 250px;
-            max-width: 300px;
+            max-width: 250px;
+            @media all and (max-width: 425px) {
+                max-width: 400px;
+            }
             img {
                 object-fit: cover;
                 width: 100%;
@@ -83,11 +83,6 @@ div#contenu {
                 bottom: 0px;
                 background-color: white;
                 width: 100%;
-                i {
-                    position: absolute;
-                    right: 45px;
-                    bottom: 20px;
-                }
             }
         }
     }

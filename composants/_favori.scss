@@ -1,0 +1,36 @@
+// Bouton de favori
+
+div.favori {
+    color: $primaire;
+    .coeur-plein {
+        opacity: 0;
+        transition: opacity 500ms;
+    }
+    &:hover .coeur-plein {
+        opacity: 1;
+    }
+}
+
+// Page d'accueil
+
+.desc__restaurant {
+    i {
+        position: absolute;
+        right: 45px;
+        bottom: 25px;            
+    }
+}
+
+// Page des menus
+
+div.image-titre {
+    i {
+        position: absolute;
+        right: 30px;
+        bottom: 40px;
+        @media all and (max-width: 425px) {
+            right: 15px;
+            bottom: 25px;   
+        }       
+    }
+}

@@ -1,9 +1,10 @@
+// Utils
+@import "./utils/variables";
+@import "./utils/mixins";
+
 // Base
 @import "./base/general";
 @import "./base/marges";
-
-// Utils
-@import "./utils/variables";
 
 // Layouts
 @import "./layouts/header";
@@ -11,10 +12,14 @@
 
 // Composants
 @import "./composants/bouton";
+@import "./composants/favori";
+@import "./composants/ajout";
+@import "./composants/loader";
+@import "./composants/apparition";
 
 // Pages
 @import "./pages/accueil";
-@import "./pages/menus";
+@import "./pages/menu";
 
 // Themes
 

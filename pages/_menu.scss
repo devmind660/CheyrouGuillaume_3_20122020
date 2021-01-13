@@ -1,0 +1,60 @@
+// Haut de page
+
+div.image-titre {
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 50vh;
+    }
+    h1 {
+        background-color: $grisclair;
+        font-size: 1.5em;
+        border-radius: 30px;
+        position: relative;
+    }
+}
+
+// Plats
+
+section.plat {
+    background-color: $grisclair;
+    h2 {
+        font-size: 1.2em;
+        border-bottom: 4px $tertiaire solid;
+        width: 50px;
+    }
+    div.conteneur {
+        a {
+            display: flex;
+            align-items: flex-end;
+            flex: 1;
+            background-color: white;
+            box-shadow: 0px 0px 5px silver;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            min-width: 200px;
+            .desc__plat {
+                flex: 1;
+                white-space: nowrap;
+                overflow: hidden;
+                h3, p {
+                    overflow: hidden;
+                    text-overflow: ellipsis;    
+                }
+            }
+            .ajout {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                position: absolute;
+                right: 0px;
+                background-color: $tertiaire;
+                color: white;
+                height: 100%;
+            }
+        }
+    }
+}

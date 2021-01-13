@@ -1,0 +1,15 @@
+section.plat a {
+    .ajout {
+        transform: translateX(100%);
+    }
+    &:hover > .ajout {
+        transform: translateX(0%);
+        transform-origin: 100% 50%;
+        }
+    &:hover > .ajout i {
+        transform: rotate(1turn);
+    }
+    .ajout, .ajout i {
+        transition: transform 500ms ease-in-out;
+    }
+}

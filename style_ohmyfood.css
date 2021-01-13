@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 * {
@@ -14,6 +14,16 @@ h1 {
 a {
   color: unset;
   text-decoration: none;
+}
+
+.conteneur {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#loader div {
+  padding: 15px;
+  margin: 30px;
 }
 
 header {
@@ -43,17 +53,17 @@ h3 {
   margin: 15px;
 }
 
-#introduction, #fonctionnement, #restaurants, section.plat, footer {
+#introduction, #fonctionnement, #restaurants, h1, section.plat, footer {
   padding: 30px;
 }
 @media all and (max-width: 425px) {
-  #introduction, #fonctionnement, #restaurants, section.plat, footer {
+  #introduction, #fonctionnement, #restaurants, h1, section.plat, footer {
     padding: 15px;
   }
 }
 
 #restaurants a {
-  margin: 15px 5px;
+  margin: 15px;
 }
 @media all and (max-width: 425px) {
   #restaurants a {
@@ -62,27 +72,33 @@ h3 {
 }
 
 .desc__restaurant {
-  padding: 15px;
-}
-@media all and (max-width: 425px) {
-  .desc__restaurant {
-    padding: 10px;
-  }
+  padding: 10px 15px;
 }
 
 h1 {
   margin: -30px 0px 0px 0px;
 }
 
+section.plat h2 {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
 section.plat a {
-  padding: 15px;
   margin: 15px 5px;
 }
 @media all and (max-width: 425px) {
   section.plat a {
-    padding: 10px;
     margin: 5px 0px;
   }
+}
+
+.desc__plat, .prix {
+  padding: 10px 15px;
+}
+
+.ajout {
+  padding: 0px 15px;
 }
 
 header {
@@ -107,13 +123,13 @@ footer h3 {
 }
 footer ul {
   list-style-type: none;
-  line-height: 0;
+  line-height: 1.8;
 }
-footer ul li {
+footer ul li.li__footer {
   display: flex;
   align-items: center;
 }
-footer ul li i {
+footer ul li.li__footer i {
   width: 25px;
 }
 
@@ -147,6 +163,148 @@ button.btn::after {
   z-index: -1;
 }
 
+div.favori {
+  color: #9356DC;
+}
+div.favori .coeur-plein {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+div.favori:hover .coeur-plein {
+  opacity: 1;
+}
+
+.desc__restaurant i {
+  position: absolute;
+  right: 45px;
+  bottom: 25px;
+}
+
+div.image-titre i {
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+}
+@media all and (max-width: 425px) {
+  div.image-titre i {
+    right: 15px;
+    bottom: 25px;
+  }
+}
+
+section.plat a .ajout {
+  transform: translateX(100%);
+}
+section.plat a:hover > .ajout {
+  transform: translateX(0%);
+  transform-origin: 100% 50%;
+}
+section.plat a:hover > .ajout i {
+  transform: rotate(1turn);
+}
+section.plat a .ajout, section.plat a .ajout i {
+  transition: transform 500ms ease-in-out;
+}
+
+#fond {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: -9999px;
+  z-index: 99;
+  animation: chargement--3 2.3s linear;
+}
+
+#loader {
+  top: -9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  opacity: 0;
+  animation: chargement--2 2.3s linear;
+}
+
+#loader div {
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  color: white;
+  box-shadow: 0px 3px 3px silver;
+  border-radius: 20px;
+}
+
+#loader div i {
+  animation: chargement--1 1.3s linear infinite;
+}
+
+@keyframes chargement--1 {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.3) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+@keyframes chargement--2 {
+  0% {
+    opacity: 1;
+    transform: translate(0px, 9999px);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0px, 9999px);
+  }
+}
+@keyframes chargement--3 {
+  0% {
+    opacity: 1;
+    transform: translate(0px, 9999px);
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0px, 9999px);
+  }
+}
+.apparition--1 {
+  animation: apparition 1s linear;
+}
+
+.apparition--2 {
+  animation: apparition 1.5s linear;
+}
+
+.apparition--3 {
+  animation: apparition 2s linear;
+}
+
+.apparition--4 {
+  animation: apparition 2.5s linear;
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #localisation {
   background-color: #eaeaea;
   box-shadow: inset 0 3px 3px silver;
@@ -210,59 +368,56 @@ div#contenu {
 #restaurants {
   background-color: #f6f6f6;
 }
-#restaurants .conteneur {
-  display: flex;
-  flex-wrap: wrap;
+#restaurants div.conteneur {
   justify-content: space-around;
 }
-#restaurants .conteneur a {
+#restaurants div.conteneur a {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 0 15px silver;
   position: relative;
   height: 200px;
-  min-width: 250px;
-  max-width: 300px;
+  max-width: 250px;
 }
-#restaurants .conteneur a img {
+@media all and (max-width: 425px) {
+  #restaurants div.conteneur a {
+    max-width: 400px;
+  }
+}
+#restaurants div.conteneur a img {
   object-fit: cover;
   width: 100%;
 }
-#restaurants .conteneur a .desc__restaurant {
+#restaurants div.conteneur a .desc__restaurant {
   position: absolute;
   bottom: 0px;
   background-color: white;
   width: 100%;
 }
-#restaurants .conteneur a .desc__restaurant i {
-  position: absolute;
-  right: 45px;
-  bottom: 20px;
-}
 
-img {
+div.image-titre {
+  position: relative;
+}
+div.image-titre img {
   width: 100%;
+  height: auto;
   object-fit: cover;
-  max-height: 400px;
+  max-height: 50vh;
 }
-
-section.plat, h1 {
+div.image-titre h1 {
   background-color: #f6f6f6;
-}
-
-h1 {
   font-size: 1.5em;
   border-radius: 30px;
-  padding: 15px;
   position: relative;
 }
 
+section.plat {
+  background-color: #f6f6f6;
+}
 section.plat h2 {
   font-size: 1.2em;
-}
-section.plat div.conteneur {
-  display: flex;
-  flex-wrap: wrap;
+  border-bottom: 4px #99E2D0 solid;
+  width: 50px;
 }
 section.plat div.conteneur a {
   display: flex;
@@ -270,14 +425,29 @@ section.plat div.conteneur a {
   flex: 1;
   background-color: white;
   box-shadow: 0px 0px 5px silver;
-  border-radius: 15px;
-  white-space: nowrap;
+  border-radius: 10px;
+  position: relative;
   overflow: hidden;
-  text-overflow: ellipsis;
   min-width: 200px;
 }
 section.plat div.conteneur a .desc__plat {
   flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+section.plat div.conteneur a .desc__plat h3, section.plat div.conteneur a .desc__plat p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+section.plat div.conteneur a .ajout {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  background-color: #99E2D0;
+  color: white;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style_ohmyfood.css.map */

@@ -8,8 +8,8 @@ footer {
     }
     ul {
         list-style-type: none;
-        line-height: 0;
-        li {
+        line-height: 1.8;
+        li.li__footer {
             display: flex;
             align-items: center;
             i {
