@@ -9,11 +9,16 @@ footer {
     ul {
         list-style-type: none;
         line-height: 1.8;
-        li.li__footer {
+        li.footer__li {
             display: flex;
             align-items: center;
             i {
                 width: 25px;
+            }
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }

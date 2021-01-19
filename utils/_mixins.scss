@@ -1,0 +1,14 @@
+// Mixins
+
+@mixin ombre-legere {
+    box-shadow: 0px 3px 3px silver;
+}
+@mixin ombre-prononcee {
+    box-shadow: 0px 5px 10px silver;
+}
+@mixin arrondi-leger {
+    border-radius: 15px;
+}
+@mixin arrondi-prononce {
+    border-radius: 30px;
+}

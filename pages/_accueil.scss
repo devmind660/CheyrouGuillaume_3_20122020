@@ -12,7 +12,7 @@
 }
 #introduction {
     order: 2;
-    flex: 1;
+    flex: 2;
     align-self: center;
     text-align: center;
     min-width: 250px;
@@ -29,6 +29,7 @@ div#contenu {
 
 #fonctionnement {
     order: 1;
+    flex: 1;
     ol {
         list-style-type: none;
         li {
@@ -36,16 +37,16 @@ div#contenu {
             color: $primaire;
             display: flex;
             align-items: center;
-            border-radius: 30px;
-            box-shadow: 0px 5px 10px silver;
+            @include ombre-prononcee;
+            @include arrondi-prononce;
             position: relative;
-            max-width: 300px;
+            width: 220px;
             padding-left: 30px;
             p.num {
                 background-color: $primaire;
                 color: white;
                 text-align: center;
-                border-radius: 15px;
+                @include arrondi-leger;
                 position: absolute;
                 left: -5px;
                 width: 20px;
@@ -65,20 +66,27 @@ div#contenu {
     div.conteneur {
         justify-content: space-around;
         a {
-            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 0 15px silver;
+            @include ombre-prononcee;
+            @include arrondi-leger;
             position: relative;
             height: 200px;
             max-width: 250px;
             @media all and (max-width: 425px) {
                 max-width: 400px;
             }
+            p.alerte {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background-color: $tertiaire;
+                color: darken($color: $tertiaire, $amount: 40);
+            }
             img {
                 object-fit: cover;
                 width: 100%;
             }
-            .desc__restaurant {
+            div.restaurant__desc {
                 position: absolute;
                 bottom: 0px;
                 background-color: white;

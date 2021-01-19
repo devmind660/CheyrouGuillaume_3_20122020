@@ -1,15 +1,35 @@
+// Ajout d'un plat
+
 section.plat article {
-    .ajout {
+    div.ajout {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        position: absolute;
+        right: 0px;
+        background-color: $tertiaire;
+        color: white;
+        height: 100%;
         transform: translateX(100%);
     }
-    &:hover > .ajout {
+    &:hover > .plat__desc p {
+        padding-right: 40px;
+        animation: texte 0.5s;
+    }
+    @keyframes texte {
+        0% { padding-right: 15px; }
+        100% { padding-right: 40px; }
+    }
+    &:hover > p.prix {
+        transform: translateX(-45px);
+    }
+    &:hover > div.ajout {
         transform: translateX(0%);
-        transform-origin: 100% 50%;
-        }
-    &:hover > .ajout i {
+    }
+    &:hover > div.ajout i {
         transform: rotate(1turn);
     }
-    .ajout, .ajout i {
+    p.prix, div.ajout, div.ajout i {
         transition: transform 500ms ease-in-out;
     }
 }

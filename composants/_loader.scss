@@ -7,7 +7,7 @@
     position: fixed;
     top: -9999px;
     z-index: 99;
-    animation: chargement--3 2.3s linear;
+    animation: chargement-3 2.3s linear;
 }
 #loader {
     top: -9999px;
@@ -20,28 +20,28 @@
     position: fixed;
     z-index: 100;
     opacity: 0;
-    animation: chargement--2 2.3s linear;
+    animation: chargement-2 2.3s linear;
 }
 #loader div {
     background: linear-gradient(to top left, $primaire, $secondaire);
     color: white;
-    box-shadow: 0px 3px 3px silver;
-    border-radius: 20px;
+    @include ombre-legere;
+    @include arrondi-leger;
 }
 #loader div i {
-    animation: chargement--1 1.3s linear infinite;
+    animation: chargement-1 1.3s linear infinite;
 }
-@keyframes chargement--1 {
+@keyframes chargement-1 {
     0% { transform: scale(1) rotate(0deg); }
     50% { transform: scale(1.3) rotate(180deg); }
     100% { transform: scale(1) rotate(360deg); }
 }
-@keyframes chargement--2 {
+@keyframes chargement-2 {
     0% { opacity: 1; transform: translate(0px, 9999px); }
     90% { opacity: 1; }
     100% { opacity: 0; transform: translate(0px, 9999px); }
 }
-@keyframes chargement--3 {
+@keyframes chargement-3 {
     0% { opacity: 1; transform: translate(0px, 9999px); }
     90% { opacity: 0.5; }
     100% { opacity: 0; transform: translate(0px, 9999px); }

@@ -4,9 +4,9 @@ button.btn {
     display: block;
     background: linear-gradient(to top left, $primaire, $secondaire);
     color: white;
-    box-shadow: 0px 3px 3px silver;
+    @include ombre-legere;
+    @include arrondi-prononce;
     border: none;
-    border-radius: 30px;
 	outline: none;
 	cursor: pointer;
     position: relative;
@@ -23,8 +23,8 @@ button.btn {
         bottom: 0;
         left: 0;
         background: linear-gradient(to top left, lighten($primaire, 10), lighten($secondaire, 10));
-        box-shadow: 0px 5px 5px silver;
-        border-radius: 30px;
+        @include ombre-prononcee;
+        @include arrondi-prononce;
         opacity: 0;
         transition: opacity 800ms;
         position: absolute;

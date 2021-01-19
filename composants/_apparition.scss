@@ -1,17 +1,17 @@
-.apparition--1 {
-    animation: apparition 1s linear;
-}
-.apparition--2 {
-    animation: apparition 1.5s linear;
-}
-.apparition--3 {
+.apparition-1 {
     animation: apparition 2s linear;
 }
-.apparition--4 {
+.apparition-2 {
     animation: apparition 2.5s linear;
 }
+.apparition-3 {
+    animation: apparition 3s linear;
+}
+.apparition-4 {
+    animation: apparition 3.5s linear;
+}
 @keyframes apparition {
-    0% { opacity: 0; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+    0% { transform: translate(0px, 5px); opacity: 0; }
+    80% { transform: translate(0px, 5px); opacity: 0; }
+    100% { transform: translate(0px, 0px); opacity: 1; }
 }
